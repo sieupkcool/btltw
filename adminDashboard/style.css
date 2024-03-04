@@ -1,0 +1,256 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  background-color: #df3000;
+  padding: 10px;
+}
+.logo_container {
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 30px;
+}
+.logo {
+  object-fit: cover;
+  object-position: center center;
+}
+button,
+.edit {
+  background: none;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+button:hover {
+  background-color: #b80707;
+}
+.edit {
+  text-decoration: none;
+}
+.edit:hover {
+  background-color: #b80707;
+  text-decoration: underline;
+}
+.admin_profile {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 30px;
+}
+.avatar_admin {
+  cursor: pointer;
+}
+ul {
+  background-color: #fff;
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 10px;
+}
+.admin_card {
+  position: absolute;
+  margin-right: 30px;
+  top: 48px;
+  right: 10px;
+  width: 150px;
+  display: none;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+}
+.show_card {
+  display: flex;
+}
+.log_out,
+.form_add_submit {
+  background-color: #df3000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.log_out:hover {
+  background-color: #b80707;
+}
+
+.container {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+table {
+  width: 100%;
+  min-width: calc(100vw-32px);
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
+  border-collapse: collapse;
+  text-align: center;
+  /* margin-left: 10px; */
+}
+th,
+td {
+  padding: 8px;
+}
+td:nth-child(1) a {
+  color: #df3000;
+  text-decoration: none;
+}
+td:nth-child(1) a:hover {
+  text-decoration: underline;
+}
+td {
+  border-bottom: 1px solid #ddd;
+}
+thead {
+  background-color: #faeded;
+  color: #5e6c84;
+}
+.edit {
+  background-color: #df3000;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+.delete {
+  color: #df3000;
+}
+.delete:hover {
+  background-color: #fff;
+}
+
+.form_add {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form_add h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.form_add label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form_add input[type="text"],
+.form_add input[type="date"],
+.form_add select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form_add select {
+  height: 36px;
+}
+
+.form_add input::placeholder {
+  color: #aaa;
+}
+.form_add_buton {
+  text-align: center;
+}
+.container_indi {
+  display: none;
+}
+
+.kythi_info {
+  position: fixed;
+  display: none;
+  z-index: 2;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  padding-right: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.overlay {
+  display: none;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kythi_info h2,
+.kythi_info h3,
+.kythi_info p {
+  font-size: 1em; /* Điều chỉnh kích thước phù hợp */
+  margin: 0;
+  padding: 0;
+}
+
+.kythi_info h2 {
+  font-size: 1.5em; /* Kích thước lớn hơn cho tiêu đề h2 */
+  margin-bottom: 15px; /* Tăng khoảng cách dưới tiêu đề */
+}
+
+.kythi_info p {
+  margin-top: 10px;
+  margin-bottom: 10px; /* Tăng khoảng cách dưới các đoạn văn */
+  color: #555;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}

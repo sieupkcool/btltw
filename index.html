@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hệ thống thi trắc nghiệm trực tuyến</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" />
+        <h1>Hệ thống thi trắc nghiệm trực tuyến</h1>
+      </div>
+      <div class="main">
+        <div class="login">
+          <h2>Đăng nhập (dành cho người dùng)</h2>
+          <form action="#">
+            <input type="text" name="username" placeholder="Tên đăng nhập" />
+            <input type="password" name="password" placeholder="Mật khẩu" />
+            <button id="myButton" type="submit">Đăng nhập</button>
+            <a href="#">Quên mật khẩu?</a>
+            <a href="#" id="register">Đăng kí</a>
+          </form>
+        </div>
+        <div class="register">
+          <h2>Đăng ký</h2>
+          <form action="#">
+            <input type="text" name="username" placeholder="Tên đăng nhập" />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="password" placeholder="Mật khẩu" />
+            <input
+              type="password"
+              name="confirm_password"
+              placeholder="Xác nhận mật khẩu"
+            />
+            <button type="submit">Đăng ký</button>
+            <a href="#" id="login"> Quay lại trang đăng nhập</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="login.js"></script>

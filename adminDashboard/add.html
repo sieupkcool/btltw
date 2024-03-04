@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tạo kỳ thi mới</title>
+  </head>
+  <body>
+    <!-- toolbar -->
+    <div class="toolbar">
+      <div class="logo_container">
+        <a class="logo" href="/"
+          ><img
+            src="https://code.ptit.edu.vn/2020/images/logo_ptit.png"
+            alt="logo_ptit"
+            width="30"
+        /></a>
+      </div>
+      <button>Kỳ thi</button>
+      <button>Danh sách sinh viên</button>
+      <div class="admin_profile">
+        <img
+          class="avatar_admin"
+          src="https://code.ptit.edu.vn/2020/images/avt.png"
+          alt=""
+          onclick="toggleInfo()"
+          width="35"
+        />
+        <!-- information card -->
+        <div class="admin_card" id="adminCard">
+          <div class="admin_info">
+            <h3>Nguyễn Văn A</h3>
+            <p>B21DCCNXXX</p>
+          </div>
+          <a href="" class="log_out">Đăng xuất</a>
+        </div>
+      </div>
+    </div>
+    <!-- form tạo kỳ thi -->
+    <div class="form_add">
+      <h2>Tạo kỳ thi mới</h2>
+
+      <label for="monhoc">Chọn môn học:</label>
+      <select name="monhoc" id="monhoc">
+        <option value="daiso">Đại số</option>
+        <option value="giaitich1">Giải tích 1</option>
+        <option value="giaitich2">Giải tích 2</option>
+        <option value="tienganh">Tiếng Anh</option>
+        <option value="triet">Triết học Mac-Lenin</option>
+      </select>
+
+      <label for="kythi">Chọn kỳ thi</label>
+      <select name="kythi" id="kythi">
+        <option value="hk1">Học kỳ 1</option>
+        <option value="hk2">Học kỳ 2</option>
+        <option value="15p">15p</option>
+      </select>
+
+      <label for="ngaythi">Nhập ngày thi</label>
+      <input type="date" name="ngaythi" id="ngaythi" placeholder="YYYY-MM-DD" />
+
+      <label for="hinhthucthi">Chọn hình thức thi</label>
+      <select name="hinhthucthi" id="hinhthucthi">
+        <option value="tracnghiem">trắc nghiệm</option>
+        <option value="tuluan">tự luận</option>
+      </select>
+
+      <div class="form_add_buton">
+        <button class="form_add_submit" onclick="goBack()">Submit</button>
+      </div>
+    </div>
+
+    <!-- table hidden-->
+    <div class="container_indi">
+      <h2>Các kỳ thi</h2>
+      <a href="/add.html" class="edit">
+        thêm <i class="fa-solid fa-pen-to-square"></i>
+      </a>
+      <table class="ky_thi" id="ky_thi_Array">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tên môn học</th>
+            <th>Ngày thi</th>
+            <th>Kỳ thi</th>
+            <th>Cách thức thi</th>
+            <th>Xóa</th>
+          </tr>
+        </thead>
+        <tbody id="Table"></tbody>
+      </table>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+    <link rel="stylesheet" href="./asset/style.css" />
+    <link rel="stylesheet" href="../adminDashboard/style.css" />
+    <link
+      rel="stylesheet"
+      href="/asset/fonts/themify-icons/themify-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <title>Giới thiệu bản thân</title>
+  </head>
+  <body>
+    <!-- toolbar -->
+    <div class="toolbar">
+      <div class="logo_container">
+        <a class="logo" href="/"
+          ><img
+            src="https://code.ptit.edu.vn/2020/images/logo_ptit.png"
+            alt="logo_ptit"
+            width="30"
+        /></a>
+      </div>
+      <button>Kỳ thi</button>
+      <button id="svBtn">Danh sách sinh viên</button>
+      <button id="tracuuBtn">Tra cứu thông tin sinh viên</button>
+      <div class="admin_profile">
+        <img
+          class="avatar_admin"
+          src="https://code.ptit.edu.vn/2020/images/avt.png"
+          alt=""
+          onclick="toggleInfo()"
+          width="35"
+        />
+        <!-- information card -->
+        <div class="admin_card" id="adminCard">
+          <div class="admin_info">
+            <h3>Nguyễn Văn A</h3>
+            <p>B21DCCNXXX</p>
+          </div>
+          <a href="" class="log_out">Đăng xuất</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 container student-result">
+      <h1>Tra cứu thông tin sinh viên</h1>
+      <div class="student-result__search mt-4">
+        <p>Nhập họ tên hoặc mã SV:</p>
+        <input
+          type="text"
+          class="student-result__search-input"
+          id="search"
+          placeholder="Nhập họ tên hoặc mã SV"
+        />
+        <button class="student-result__search-btn">Tìm kiếm</button>
+      </div>
+      <div class="general-result__export">
+        <p>Xuất báo cáo dưới dạng:</p>
+        <a href="" class="">PDF</a>
+        <a href="" class="">Excel</a>
+      </div>
+      <h5>Thông tin sinh viên</h5>
+      <div class="student-result__infomation">
+        <p>
+          Họ và tên:
+          <span> Nguyễn Văn C</span>
+        </p>
+        <p>
+          Mã SV:
+          <span>B21DCCN456</span>
+        </p>
+        <p>
+          Lớp:
+          <span>Lập trình Web - Nhóm 01</span>
+        </p>
+      </div>
+      <table class="student-result__table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Tên kì thi</th>
+            <th>Điểm số</th>
+            <th>Trạng thái</th>
+            <th>Thời gian tham gia</th>
+            <th>Xem chi tiết bài thi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Kiểm tra hàng ngày</td>
+            <td>9.8/10</td>
+            <td class="student-result__status--complete">Đã hòa thành</td>
+            <td>23/10/2023</td>
+            <td><a href="">Xem</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Thi giữa kì</td>
+            <td>9.8/10</td>
+            <td class="student-result__status--complete">Đã hòa thành</td>
+            <td>23/10/2023</td>
+            <td><a href="">Xem</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Thi giữa kì</td>
+            <td>9.8/10</td>
+            <td class="student-result__status--complete">Đã hòa thành</td>
+            <td>23/10/2023</td>
+            <td><a href="">Xem</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Thi cuối kì</td>
+            <td>-/10</td>
+            <td class="student-result__status--fail">Chưa hòa thành</td>
+            <td>30/10/2023</td>
+            <td><a href="">Xem</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+<script src="./action.js"></script>

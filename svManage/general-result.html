@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+    <link rel="stylesheet" href="../adminDashboard/style.css" />
+    <link rel="stylesheet" href="./asset/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <title>Tra cứu điểm</title>
+  </head>
+  <body>
+    <!-- toolbar -->
+    <div class="toolbar">
+      <div class="logo_container">
+        <a class="logo" href="/"
+          ><img
+            src="https://code.ptit.edu.vn/2020/images/logo_ptit.png"
+            alt="logo_ptit"
+            width="30"
+        /></a>
+      </div>
+      <button>Kỳ thi</button>
+      <button id="svBtn">Danh sách sinh viên</button>
+      <button id="tracuuBtn">Tra cứu thông tin sinh viên</button>
+      <div class="admin_profile">
+        <img
+          class="avatar_admin"
+          src="https://code.ptit.edu.vn/2020/images/avt.png"
+          alt=""
+          onclick="toggleInfo()"
+          width="35"
+        />
+        <!-- information card -->
+        <div class="admin_card" id="adminCard">
+          <div class="admin_info">
+            <h3>Nguyễn Văn A</h3>
+            <p>B21DCCNXXX</p>
+          </div>
+          <a href="" class="log_out">Đăng xuất</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 container general-result">
+      <h1>Danh sách điểm của sinh viên</h1>
+      <div class="general-result__filter">
+        <span>Lớp:</span>
+        <select
+          id="btn-filter-select-class"
+          class="general-result__filter-select"
+        >
+          <option value="web-01">Lập trình Web - Nhóm 01</option>
+          <option value="web-02">Lập trình Web - Nhóm 02</option>
+          <option value="web-03">Lập trình Web - Nhóm 03</option>
+        </select>
+        <span>Kỳ thi:</span>
+        <select
+          id="btn-filter-select-exam"
+          class="general-result__filter-select"
+        >
+          <option value="daily-exam">Kiểm tra hàng ngày</option>
+          <option value="mid-exam">Thi giữa kì</option>
+          <option value="end-exam">Thi cuối kì</option>
+        </select>
+        <span>Ngày thi:</span>
+        <select
+          id="btn-filter-select-date"
+          class="general-result__filter-select"
+        >
+          <option value="20/8/2023">20/8/2023</option>
+          <option value="21/8/2023">21/8/2023</option>
+          <option value="22/8/2023">22/8/2023</option>
+          <option value="23/8/2023">23/8/2023</option>
+          <option value="24/8/2023">24/8/2023</option>
+          <option value="25/8/2023">25/8/2023</option>
+        </select>
+        <button class="general-result__filter-btn">Tìm kiếm</button>
+      </div>
+      <div class="general-result__export">
+        <p>Xuất báo cáo dưới dạng:</p>
+        <a href="" class="">PDF</a>
+        <a href="" class="">Excel</a>
+      </div>
+      <table class="general-result__table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Họ và tên</th>
+            <th>Mã SV</th>
+            <th>Tổng số lần tham gia</th>
+            <th>Tỉ lệ hoàn thành</th>
+            <th>Phân phối điểm số</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Nguyễn Văn A</td>
+            <td>B21DCCN123</td>
+            <td>12</td>
+            <td>80%</td>
+            <td><a href="">Xem biểu đồ</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Nguyễn Văn A</td>
+            <td>B21DCCN123</td>
+            <td>12</td>
+            <td>80%</td>
+            <td><a href="">Xem biểu đồ</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Nguyễn Văn A</td>
+            <td>B21DCCN123</td>
+            <td>12</td>
+            <td>80%</td>
+            <td><a href="">Xem biểu đồ</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Nguyễn Văn A</td>
+            <td>B21DCCN123</td>
+            <td>12</td>
+            <td>80%</td>
+            <td><a href="">Xem biểu đồ</a></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Nguyễn Văn A</td>
+            <td>B21DCCN123</td>
+            <td>12</td>
+            <td>80%</td>
+            <td><a href="">Xem biểu đồ</a></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Nguyễn Văn A</td>
+            <td>B21DCCN123</td>
+            <td>12</td>
+            <td>80%</td>
+            <td><a href="">Xem biểu đồ</a></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Nguyễn Văn A</td>
+            <td>B21DCCN123</td>
+            <td>12</td>
+            <td>80%</td>
+            <td><a href="">Xem biểu đồ</a></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Nguyễn Văn A</td>
+            <td>B21DCCN123</td>
+            <td>12</td>
+            <td>80%</td>
+            <td><a href="">Xem biểu đồ</a></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Nguyễn Văn A</td>
+            <td>B21DCCN123</td>
+            <td>12</td>
+            <td>80%</td>
+            <td><a href="">Xem biểu đồ</a></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Nguyễn Văn A</td>
+            <td>B21DCCN123</td>
+            <td>12</td>
+            <td>80%</td>
+            <td><a href="">Xem biểu đồ</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+<script src="./action.js"></script>
