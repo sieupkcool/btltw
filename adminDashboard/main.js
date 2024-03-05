@@ -187,9 +187,9 @@ function goBack() {
 }
 
 document.getElementById("svBtn").addEventListener("click", function () {
-  window.location.href = "/svManage/general-result.html";
+  window.location.href = "../svManage/general-result.html";
 });
 
 document.getElementById("tracuuBtn").addEventListener("click", function () {
-  window.location.href = "/svManage/student-result.html";
+  window.location.href = "../svManage/student-result.html";
 });
