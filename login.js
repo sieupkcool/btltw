@@ -12,7 +12,7 @@ loginForm.addEventListener("submit", (event) => {
     });
   } else if (username === "admin") {
     document.getElementById("myButton").addEventListener("click", function () {
-      window.location.href = "/adminDashboard/index.html";
+      window.location.href = "adminDashboard/index.html";
     });
   }
   // alert("Đăng nhập thành công!");
