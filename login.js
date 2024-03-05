@@ -8,11 +8,11 @@ loginForm.addEventListener("submit", (event) => {
   const password = loginForm.querySelector('input[name="password"]').value;
   if (username === "user") {
     document.getElementById("myButton").addEventListener("click", function () {
-      window.location.href = "userDashboard/trangchinh.html";
+      window.location.href = "./userDashboard/trangchinh.html";
     });
   } else if (username === "admin") {
     document.getElementById("myButton").addEventListener("click", function () {
-      window.location.href = "adminDashboard/index.html";
+      window.location.href = "./adminDashboard/index.html";
     });
   }
   // alert("Đăng nhập thành công!");
